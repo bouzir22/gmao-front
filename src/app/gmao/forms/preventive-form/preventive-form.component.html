@@ -1,0 +1,70 @@
+<h1>
+
+    form works
+    </h1>
+    
+    <form [formGroup]="form" (ngSubmit)="getData()">
+      <mat-grid-list cols="2" >
+    
+    <div class= "" >
+    
+    <input type="hidden" formControlName="$key" >
+    
+    
+    <mat-form-field class= "control1">
+      <input formControlName="description" matInput placeholder="description">
+      </mat-form-field>
+      <mat-form-field class= "control2">
+        <mat-select formControlName="code" placeholder="code intervention">
+          <mat-option>zosd66</mat-option>
+          <ng-container >
+            <mat-option value="mach2" >xdkl5</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+    
+    
+    </div>
+    
+    <div class ="second-row">
+    
+    
+      <mat-form-field>
+        <mat-select formControlName="name" placeholder="Machine">
+          <mat-option>mach1</mat-option>
+          <ng-container >
+            <mat-option value="mach2" >mach2</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+    
+    
+      <mat-form-field>
+        <input formControlName="date" matInput [matDatepicker]="picker" placeholder="plan date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    <div class="button-row">
+      <button mat-raised-button color="warn" type="submit" [disabled]="form.invalid">Submit</button>
+      <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+    </div>
+    
+    </mat-grid-list>
+    
+    
+    
+    
+    
+    </form>
+    
